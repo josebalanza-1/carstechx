@@ -1,0 +1,169 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carstechx | Taller Mecánico</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>CARSTECHX</h1>
+            <p>Taller mecánico profesional</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Página principal -->
+
+        <section id="inicio">
+            <h2>Tu coche, nuestra pasión</h2>
+
+            <p>
+                En Carstechx cuidamos de tu vehículo con profesionalidad,
+                experiencia y atención personalizada.
+            </p>
+
+            <p>
+                Realizamos reparaciones, mantenimiento y diagnóstico
+                para que puedas conducir con tranquilidad.
+            </p>
+
+            <a href="#contacto">Solicitar información</a>
+
+            <figure>
+                <img src="{% static 'img/taller.jpg' %}"
+                     alt="Interior de un taller mecánico">
+                <figcaption>Instalaciones de nuestro taller</figcaption>
+            </figure>
+        </section>
+
+        <!-- Servicios -->
+
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <p>
+                Ofrecemos diferentes servicios para mantener tu vehículo
+                en las mejores condiciones.
+            </p>
+
+            <article>
+                <h3>Mecánica general</h3>
+                <p>
+                    Reparación de averías, sustitución de piezas y
+                    mantenimiento de los principales componentes.
+                </p>
+            </article>
+
+            <article>
+                <h3>Diagnóstico electrónico</h3>
+                <p>
+                    Identificación de fallos mediante equipos de diagnóstico
+                    y revisión de los sistemas electrónicos.
+                </p>
+            </article>
+
+            <article>
+                <h3>Mantenimiento</h3>
+                <p>
+                    Cambios de aceite, filtros, frenos y revisiones
+                    periódicas del vehículo.
+                </p>
+            </article>
+
+            <article>
+                <h3>Revisión de vehículos</h3>
+                <p>
+                    Comprobación del estado general del automóvil para
+                    detectar posibles problemas.
+                </p>
+            </article>
+        </section>
+
+        <!-- Sobre nosotros -->
+
+        <section id="nosotros">
+            <h2>Sobre Carstechx</h2>
+
+            <p>
+                Somos un taller dedicado al mantenimiento y reparación
+                de vehículos. Nuestro objetivo es ofrecer un servicio
+                profesional, transparente y de confianza.
+            </p>
+
+            <p>
+                Trabajamos para encontrar soluciones adecuadas a las
+                necesidades de cada cliente y de cada vehículo.
+            </p>
+        </section>
+
+        <!-- Contacto -->
+
+        <section id="contacto">
+            <h2>Contacta con nosotros</h2>
+
+            <p>
+                ¿Tu vehículo necesita una revisión o reparación?
+                Estamos aquí para ayudarte.
+            </p>
+
+            <address>
+                <p>Teléfono: 600 000 000</p>
+                <p>Correo: info@carstechx.com</p>
+                <p>Dirección: Calle del Taller, Murcia</p>
+            </address>
+
+            <form action="#" method="post">
+                {% csrf_token %}
+
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CARSTECHX - Taller Mecánico</p>
+        <p>&copy; 2026 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+```

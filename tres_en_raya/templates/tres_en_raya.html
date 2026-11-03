@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres en raya</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Tres en raya</h1>
+
+        <p class="mensaje">{{ mensaje }}</p>
+
+        {% if not terminado %}
+            <form action="{% url 'tres_en_raya' %}" method="post">
+                {% csrf_token %}
+
+                <input type="hidden" name="tablero" value="{{ tablero|join:'' }}">
+                <input type="hidden" name="turno" value="{{ turno }}">
+
+                <div class="tablero">
+                    {% for casilla in tablero %}
+                        <button type="submit" name="posicion" value="{{ forloop.counter0 }}">
+                            {{ casilla }}
+                        </button>
+                    {% endfor %}
+                </div>
+
+            </form>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

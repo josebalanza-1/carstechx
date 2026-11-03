@@ -1,0 +1,176 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f1;
+    color: #252525;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.2;
+}
+
+/* =========================
+   CABECERA
+========================= */
+
+header {
+    min-height: 85px;
+    background-color: #191b1d;
+    color: white;
+    padding: 15px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #e66a25;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aaa;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #ddd;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #e66a25;
+}
+
+/* =========================
+   SECCIÓN PRINCIPAL
+========================= */
+
+#inicio {
+    min-height: 550px;
+    padding: 100px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+
+    background:
+        linear-gradient(90deg,
+            rgba(15, 17, 19, 0.95),
+            rgba(15, 17, 19, 0.65)),
+        url("../img/taller.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+#inicio h2 {
+    max-width: 700px;
+    font-size: clamp(45px, 7vw, 75px);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+#inicio p {
+    max-width: 550px;
+    color: #ddd;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+#inicio>a {
+    display: inline-block;
+    background-color: #e66a25;
+    color: white;
+    padding: 14px 25px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+#inicio>a:hover {
+    background-color: #bd4f16;
+}
+
+#inicio figure {
+    display: none;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+#servicios {
+    padding: 60px 5%;
+}
+
+#servicios h2,
+#contacto h2,
+#nosotros h2 {
+    font-size: 35px;
+}
+
+#servicios article {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+#nosotros {
+    padding: 65px 8%;
+}
+
+#contacto {
+    padding: 60px 6%;
+}
+
+form {
+    padding: 22px;
+}
+
+footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
