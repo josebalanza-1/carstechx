@@ -1,2 +1,4 @@
-python manage.py startapp modulo
+py -m pipenv shell
 py manage.py runserver
+python manage.py startapp modulo
+

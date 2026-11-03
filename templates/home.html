@@ -1,169 +1,444 @@
+
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carstechx | Taller Mecánico</title>
-</head>
 
+    <title>Carstechx</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 <body>
 
-    <header>
-        <div>
-            <h1>CARSTECHX</h1>
-            <p>Taller mecánico profesional</p>
+    <!-- CABECERA -->
+    <header class="cabecera" id="inicio">
+
+        <div class="contenedor cabecera-interior">
+
+            <a href="#inicio" class="logo">
+                CARSTECHX
+            </a>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#instalaciones">Instalaciones</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <a href="#cita" class="boton boton-cabecera">
+                Solicitar cita
+            </a>
+
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Sobre nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+
 
     <main>
 
-        <!-- Página principal -->
+        <!-- PORTADA PRINCIPAL -->
+        <section class="portada">
 
-        <section id="inicio">
-            <h2>Tu coche, nuestra pasión</h2>
+            <div class="contenedor portada-contenido">
 
-            <p>
-                En Carstechx cuidamos de tu vehículo con profesionalidad,
-                experiencia y atención personalizada.
-            </p>
+                <p class="etiqueta">
+                    TALLER MECÁNICO ESPECIALIZADO
+                </p>
 
-            <p>
-                Realizamos reparaciones, mantenimiento y diagnóstico
-                para que puedas conducir con tranquilidad.
-            </p>
+                <h1>
+                    Cuidamos tu vehículo.
+                    <span>Garantizamos tu tranquilidad.</span>
+                </h1>
 
-            <a href="#contacto">Solicitar información</a>
+                <p class="descripcion">
+                    Mantenimiento, diagnóstico y reparación de vehículos
+                    con un servicio profesional, transparente y de confianza.
+                </p>
 
-            <figure>
-                <img src="{% static 'img/taller.jpg' %}"
-                     alt="Interior de un taller mecánico">
-                <figcaption>Instalaciones de nuestro taller</figcaption>
-            </figure>
+                <div class="portada-botones">
+
+                    <a href="#servicios" class="boton">
+                        Descubrir servicios
+                    </a>
+
+                    <a href="#contacto" class="boton boton-secundario">
+                        Contactar
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- Servicios -->
 
-        <section id="servicios">
-            <h2>Nuestros servicios</h2>
+        <!-- SERVICIOS -->
+        <section class="seccion servicios" id="servicios">
 
-            <p>
-                Ofrecemos diferentes servicios para mantener tu vehículo
-                en las mejores condiciones.
-            </p>
+            <div class="contenedor">
 
-            <article>
-                <h3>Mecánica general</h3>
-                <p>
-                    Reparación de averías, sustitución de piezas y
-                    mantenimiento de los principales componentes.
-                </p>
-            </article>
+                <div class="seccion-cabecera">
 
-            <article>
-                <h3>Diagnóstico electrónico</h3>
-                <p>
-                    Identificación de fallos mediante equipos de diagnóstico
-                    y revisión de los sistemas electrónicos.
-                </p>
-            </article>
+                    <p class="etiqueta">QUÉ HACEMOS</p>
 
-            <article>
-                <h3>Mantenimiento</h3>
-                <p>
-                    Cambios de aceite, filtros, frenos y revisiones
-                    periódicas del vehículo.
-                </p>
-            </article>
+                    <h2>Nuestros servicios</h2>
 
-            <article>
-                <h3>Revisión de vehículos</h3>
-                <p>
-                    Comprobación del estado general del automóvil para
-                    detectar posibles problemas.
-                </p>
-            </article>
+                    <p>
+                        Soluciones mecánicas para mantener tu vehículo
+                        en las mejores condiciones.
+                    </p>
+
+                </div>
+
+
+                <div class="rejilla">
+
+                    <article class="tarjeta-servicio">
+
+                        <img src="{% static 'img/mantenimiento.jpg' %}"
+                             alt="Mantenimiento de un vehículo en taller">
+
+                        <div class="tarjeta-texto">
+
+                            <h3>Mantenimiento</h3>
+
+                            <p>
+                                Revisiones periódicas, cambios de aceite,
+                                filtros y mantenimiento preventivo.
+                            </p>
+
+                            <a href="#contacto">Más información →</a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="tarjeta-servicio">
+
+                        <img src="{% static 'img/diagnostico.jpg' %}"
+                             alt="Diagnóstico electrónico de un automóvil">
+
+                        <div class="tarjeta-texto">
+
+                            <h3>Diagnóstico electrónico</h3>
+
+                            <p>
+                                Identificación de averías mediante
+                                herramientas de diagnóstico especializadas.
+                            </p>
+
+                            <a href="#contacto">Más información →</a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="tarjeta-servicio">
+
+                        <img src="{% static 'img/mecanica.jpg' %}"
+                             alt="Reparación mecánica de un automóvil">
+
+                        <div class="tarjeta-texto">
+
+                            <h3>Reparación mecánica</h3>
+
+                            <p>
+                                Reparación y sustitución de componentes
+                                para recuperar el rendimiento del vehículo.
+                            </p>
+
+                            <a href="#contacto">Más información →</a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="tarjeta-servicio">
+
+                        <img src="{% static 'img/frenos.jpg' %}"
+                             alt="Sistema de frenos de un automóvil">
+
+                        <div class="tarjeta-texto">
+
+                            <h3>Frenos y seguridad</h3>
+
+                            <p>
+                                Comprobación y reparación de frenos,
+                                suspensión y elementos de seguridad.
+                            </p>
+
+                            <a href="#contacto">Más información →</a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- Sobre nosotros -->
 
-        <section id="nosotros">
-            <h2>Sobre Carstechx</h2>
+        <!-- SOBRE NOSOTROS -->
+        <section class="seccion nosotros" id="nosotros">
 
-            <p>
-                Somos un taller dedicado al mantenimiento y reparación
-                de vehículos. Nuestro objetivo es ofrecer un servicio
-                profesional, transparente y de confianza.
-            </p>
+            <div class="contenedor nosotros-contenido">
 
-            <p>
-                Trabajamos para encontrar soluciones adecuadas a las
-                necesidades de cada cliente y de cada vehículo.
-            </p>
+                <div class="nosotros-imagen">
+
+                    <img src="{% static 'img/taller.jpg' %}"
+                         alt="Instalaciones del taller Carstechx">
+
+                </div>
+
+
+                <div class="nosotros-texto">
+
+                    <p class="etiqueta">SOBRE NOSOTROS</p>
+
+                    <h2>Profesionalidad en cada reparación</h2>
+
+                    <p>
+                        En Carstechx entendemos que tu vehículo es una
+                        parte importante de tu día a día.
+                    </p>
+
+                    <p>
+                        Por eso apostamos por un servicio cercano,
+                        un trabajo cuidadoso y una comunicación
+                        transparente durante todo el proceso.
+                    </p>
+
+                    <ul>
+                        <li>Atención personalizada.</li>
+                        <li>Diagnóstico y reparación profesional.</li>
+                        <li>Transparencia en nuestros servicios.</li>
+                        <li>Compromiso con la calidad.</li>
+                    </ul>
+
+                    <a href="#contacto" class="boton">
+                        Contactar con nosotros
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- Contacto -->
 
-        <section id="contacto">
-            <h2>Contacta con nosotros</h2>
+        <!-- INSTALACIONES -->
+        <section class="seccion instalaciones" id="instalaciones">
 
-            <p>
-                ¿Tu vehículo necesita una revisión o reparación?
-                Estamos aquí para ayudarte.
-            </p>
+            <div class="contenedor">
 
-            <address>
-                <p>Teléfono: 600 000 000</p>
-                <p>Correo: info@carstechx.com</p>
-                <p>Dirección: Calle del Taller, Murcia</p>
-            </address>
+                <div class="seccion-cabecera">
 
-            <form action="#" method="post">
-                {% csrf_token %}
+                    <p class="etiqueta">NUESTRO ESPACIO</p>
 
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <h2>Instalaciones y equipamiento</h2>
+
+                    <p>
+                        Un espacio preparado para trabajar
+                        con precisión y profesionalidad.
+                    </p>
+
                 </div>
 
-                <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="galeria">
+
+                    <img src="{% static 'img/instalacion1.jpg' %}"
+                         alt="Zona de trabajo del taller">
+
+                    <img src="{% static 'img/instalacion2.jpg' %}"
+                         alt="Equipamiento mecánico">
+
+                    <img src="{% static 'img/instalacion3.jpg' %}"
+                         alt="Vehículo en zona de reparación">
+
                 </div>
 
-                <div>
-                    <label for="asunto">Asunto:</label>
-                    <input type="text" id="asunto" name="asunto" required>
-                </div>
+            </div>
+
+        </section>
+
+
+        <!-- LLAMADA A LA ACCIÓN -->
+        <section class="cita" id="cita">
+
+            <div class="contenedor cita-contenido">
 
                 <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <p class="etiqueta">¿NECESITAS UNA REVISIÓN?</p>
+
+                    <h2>Tu próximo viaje empieza con un vehículo en buenas condiciones.</h2>
+
+                    <p>
+                        Ponte en contacto con nosotros y consulta
+                        las necesidades de tu vehículo.
+                    </p>
                 </div>
 
-                <button type="submit">Enviar mensaje</button>
-            </form>
+                <a href="#contacto" class="boton">
+                    Solicitar cita
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section class="seccion contacto" id="contacto">
+
+            <div class="contenedor">
+
+                <div class="seccion-cabecera">
+
+                    <p class="etiqueta">ESTAMOS A TU DISPOSICIÓN</p>
+
+                    <h2>Contacta con nosotros</h2>
+
+                    <p>
+                        Cuéntanos qué necesita tu vehículo.
+                        Estaremos encantados de ayudarte.
+                    </p>
+
+                </div>
+
+
+                <div class="contacto-contenido">
+
+                    <div class="contacto-info">
+
+                        <h3>Información de contacto</h3>
+
+                        <p>
+                            <strong>Teléfono:</strong>
+                            [Número de teléfono]
+                        </p>
+
+                        <p>
+                            <strong>Correo electrónico:</strong>
+                            [Correo electrónico]
+                        </p>
+
+                        <p>
+                            <strong>Dirección:</strong>
+                            [Dirección del taller]
+                        </p>
+
+                        <p>
+                            <strong>Horario:</strong>
+                            [Horario de atención]
+                        </p>
+
+                    </div>
+
+
+                    <div class="contacto-formulario" id="formulario-contacto">
+
+                        <h3>¿En qué podemos ayudarte?</h3>
+
+                        <form action="#" method="post">
+
+                            {% csrf_token %}
+
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre"
+                                   placeholder="Tu nombre" required>
+
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email"
+                                   placeholder="Tu correo electrónico" required>
+
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                   placeholder="Tu teléfono">
+
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"
+                                      rows="5"
+                                      placeholder="Cuéntanos qué necesita tu vehículo"
+                                      required></textarea>
+
+                            <button type="submit" class="boton">
+                                Enviar mensaje
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>CARSTECHX - Taller Mecánico</p>
-        <p>&copy; 2026 Todos los derechos reservados.</p>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+
+        <div class="contenedor pie-contenido">
+
+            <div class="pie-marca">
+
+                <a href="#inicio" class="logo">CARSTECHX</a>
+
+                <p>
+                    Servicio profesional y compromiso
+                    con el cuidado de tu vehículo.
+                </p>
+
+            </div>
+
+
+            <div class="pie-enlaces">
+
+                <h3>Navegación</h3>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+
+            </div>
+
+
+            <div class="pie-enlaces">
+
+                <h3>Contacto</h3>
+
+                <p>[Número de teléfono]</p>
+                <p>[Correo electrónico]</p>
+                <p>[Dirección]</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="pie-final">
+
+            <p>
+                © 2026 Carstechx. Todos los derechos reservados.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
 </html>
-```
