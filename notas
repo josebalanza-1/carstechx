@@ -2,3 +2,5 @@ py -m pipenv shell
 py manage.py runserver
 python manage.py startapp modulo
 
+Ejemplo de pagina:
+https://www.tallerbox.com
