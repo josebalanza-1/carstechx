@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tres_en_raya',
+    'calendario',
+    
 ]
 
 MIDDLEWARE = [
