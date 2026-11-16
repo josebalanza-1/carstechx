@@ -3,4 +3,5 @@ py manage.py runserver
 python manage.py startapp modulo
 
 Ejemplo de pagina:
+http://127.0.0.1:8000/calendario/2029-02-02/
 https://www.tallerbox.com

@@ -23,9 +23,7 @@ urlpatterns = [
     path('', homepage, name='homepage'),
     path('contacto/', contacto, name='contacto'),
     path('juego/', include('tres_en_raya.urls')),
+
     # path('sesion/', include('sesion.urls')),
     path('calendario/', include('calendario.urls')),
-
-
-    
-]
+] 

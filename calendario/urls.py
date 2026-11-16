@@ -6,4 +6,4 @@ app_name = "calendario"
 
 urlpatterns = [
     path('<str:fecha>/', views.calendario, name='fecha'),
-]
+] 

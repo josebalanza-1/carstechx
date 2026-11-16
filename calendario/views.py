@@ -10,7 +10,7 @@ def calendario(request, fecha):
     mi_mes = mi_fecha.month
     mi_ano = mi_fecha.year
     mensaje = "Bienvenido al calendario"
-
+ 
     return render(request, 'calendario/fecha.html', {
         'dia': mi_dia,
         'mes': mi_mes,

@@ -1,7 +1,30 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
-# Create your views here.
-def bienvenida(request):
-    request.session["nombre"] = "Ada"
-    nombre = request.session.get("nombre", "visitante") #El primer parámetro es la clave, el segundo es el valor por defecto si no existe
-    return render(request, "bienvenida.html", {"nombre": nombre})
+# # Create your views here.
+# def ejemplo (request):
+#     context = dict()
+#     if request.session.get('nombres'):
+#         context = {
+#             nombre = request.session.get('nombres')
+#         }
+#     if request.method == 'POST' :
+#         nombre = request.POST.get('nombre', '')
+#         nombres = request.POST.get('nombres', '')
+#         nombres += nombre + '\n'
+#         request.session['nombres'] = nombres
+#         context = {
+#             'nombre' = nombres,
+#         }
+#     return render(request, 'ejemplo.html', context)
+
+# def juego(request):
+#     if request.session.get('palabra'):
+#         palabra = request.session.get('palabra')
+#         adivinado = request.session.get('adivinado')
+#         if request.method == 'POST' :
+#             letra = request.POST.get('letra')
+#         for i in range(len(palabra)):
+#             if letra == palabra[i]
+
+    
+    
