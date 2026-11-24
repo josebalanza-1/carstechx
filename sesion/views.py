@@ -1,30 +1,40 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 
-# # Create your views here.
-# def ejemplo (request):
-#     context = dict()
-#     if request.session.get('nombres'):
-#         context = {
-#             nombre = request.session.get('nombres')
-#         }
-#     if request.method == 'POST' :
-#         nombre = request.POST.get('nombre', '')
-#         nombres = request.POST.get('nombres', '')
-#         nombres += nombre + '\n'
-#         request.session['nombres'] = nombres
-#         context = {
-#             'nombre' = nombres,
-#         }
-#     return render(request, 'ejemplo.html', context)
+# Create your views here.
 
-# def juego(request):
-#     if request.session.get('palabra'):
-#         palabra = request.session.get('palabra')
-#         adivinado = request.session.get('adivinado')
-#         if request.method == 'POST' :
-#             letra = request.POST.get('letra')
-#         for i in range(len(palabra)):
-#             if letra == palabra[i]
+def sesion(request):
+    # Initialize the context dictionary
+    context = dict()
 
-    
-    
+    # Check if there are previously stored names
+    if request.session.get('nombres'):
+        context = {
+            'nombre': request.session.get('nombres')
+        }
+
+    # Check POST
+    if request.method == 'POST':
+
+        # Get the name form (user)
+        nombre = request.POST.get('nombre', '')
+
+        #stored names from the session, Add a new name to list, Save names in session.
+        nombres = request.session.get('nombres', '')
+        nombres += nombre + '\n'
+        request.session['nombres'] = nombres
+
+        # current number of visits (sesion), Increase the visit counter by one, Save visit counter in the session
+        visitas = request.session.get('visitas', 0)
+        visitas += 1
+        request.session['visitas'] = visitas
+
+        # Update the context
+        context = {
+            'nombre': nombres,
+            'visitas': visitas,
+        }
+
+    # Render the HTML template and pass the context
+    return render(request, 'ejemplo.html', context)
+
+

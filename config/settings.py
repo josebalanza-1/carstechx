@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tres_en_raya',
     'calendario', 
-    
+    'sesion',
+    'usuarios'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,12 @@ MAILERS = {
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# Session lifetime: 2 hours (7200 seconds)
+SESSION_COOKIE_AGE = 7200
+
+# The session expires when the browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Save the session on every request
+SESSION_SAVE_EVERY_REQUEST = True

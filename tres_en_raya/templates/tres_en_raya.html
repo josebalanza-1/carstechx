@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -22,17 +23,22 @@
             <form action="{% url 'tres_en_raya' %}" method="post">
                 {% csrf_token %}
 
-                <input type="hidden" name="tablero" value="{{ tablero|join:'' }}">
-                <input type="hidden" name="turno" value="{{ turno }}">
-
                 <div class="tablero">
                     {% for casilla in tablero %}
-                        <button type="submit" name="posicion" value="{{ forloop.counter0 }}">
+                        <button type="submit" name="posicion" value="{{ forloop.counter0 }}"
+                            {% if casilla != '-' %}disabled{% endif %}>
                             {{ casilla }}
                         </button>
                     {% endfor %}
                 </div>
 
+            </form>
+        {% else %}
+            <form action="{% url 'tres_en_raya' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" name="reiniciar">
+                    Nueva partida
+                </button>
             </form>
         {% endif %}
 
@@ -40,3 +46,4 @@
 
 </body>
 </html>
+
